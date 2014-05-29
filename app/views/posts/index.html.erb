@@ -1,0 +1,58 @@
+<br  />
+<br  />
+
+<div class="row">
+				<br>
+				<h1 class="centered">Post Creados</h1>
+				<hr>
+				<br>
+
+          <form  class="centered" action="posts/new">
+           <button type="submit" class="btn btn-success" >Crear Post</button>
+         </form>
+			
+  
+</div><!-- /row -->
+
+
+  <% @posts.each do |post|%>
+
+<br />
+<br>
+    
+<div class="centered"><div class="container" id="blog" name="blog">
+
+			<div id="greywrap">
+			<div class="container">
+				
+					<div class="col-lg-4 callout">
+            
+              <div class="col-lg-6 blog-bg">
+                <br>
+            <h4><%=  post.nombre %></h4>
+						<h5><%= l post.created_at, :format => :short %></h5>
+                 <p> <%= link_to 'Leer mas', post %> <%= link_to ' Editar Post', edit_post_path(post) %></p>
+					  </div>
+          </div>
+					<div class="col-xs-push-12" >
+            
+						<td><h2><%=  post.titulo %></h2></td>
+               </div>
+              <div class="col-xs-offset-0 ">
+                
+            <td><h4><%= post.contenido %></h4></td>
+           
+						
+				  </div>
+			 </div>
+    </div>
+        
+      
+  
+  <!-- /col -->
+  </div>
+				
+<%end%>				
+        
+
+

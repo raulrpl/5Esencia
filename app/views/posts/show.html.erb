@@ -1,0 +1,54 @@
+<br  />
+<br  />
+
+<div class="row">
+				<br>
+				<h1 class="centered"><%= @post.titulo %></h1>
+				<hr>
+				<br>
+</div>
+
+<div id="greywrap">
+			<div class="container">
+				
+					<div class="col-lg-4 callout">
+            
+              <div class="col-lg-6 blog-bg">
+
+                  <p><h4>
+                  <strong>Creador:</strong>
+                  <%= @post.nombre %>
+                  </h4></p>
+               </div>
+        	</div>
+               <div class="col-lg-8 blog-content">
+               <p>
+         <td><h4> <strong>Contenido:</strong><h4>
+         <%= @post.contenido %></td>
+        </p>
+
+<p>
+ <h4> <strong>Post creado el:</strong>
+  <%=  @post.created_at%></h4>
+</p>
+                
+		</div>
+
+<%= link_to 'Editar Post', edit_post_path(@post) %> 
+ <form  class="centered" action="http://raulweb2014-117044.usw1-2.nitrousbox.com/posts">
+           <button type="submit" class="btn btn-success" >Regresar</button>
+ </form>           
+            <br  />
+            <br  />
+         
+
+            </div>
+				 
+       </div>
+		</div>
+<div class="row">
+				<br>
+        <p class="centered" id="notice"><%= notice %></p>		
+				<br>
+</div>
+
