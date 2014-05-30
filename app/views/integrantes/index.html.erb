@@ -1,31 +1,53 @@
 <br  />
 <br  />
-<h1>Listing integrantes</h1>
+<br  />
+<div id="wallpaper3" id="integrantes" name="home">
+<div class="row">
+				<br>
+				<h1 class="centered">Integrantes de 5ta Esencia</h1>
+				<hr>
+				<br>
+<br  />
+<br  />
+          		
+  
+</div><!-- /row -->
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Nombre</th>
-      <th>Email</th>
-      <th>Instrumento</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @integrantes.each do |integrante| %>
-      <tr>
-        <td><%= integrante.nombre %></td>
-        <td><%= integrante.email %></td>
-        <td><%= integrante.instrumento %></td>
-        <td><%= link_to 'Show', integrante %></td>
-        <td><%= link_to 'Edit', edit_integrante_path(integrante) %></td>
-        <td><%= link_to 'Destroy', integrante, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+<br />
 <br>
+<% @integrantes.each do |integrante| %>
+    
+<div class="centered"><div class="container" id="blog" name="blog">
 
-<%= link_to 'New Integrante', new_integrante_path %>
+		<div id="greywrap">
+			<div class="container">
+				
+					
+            
+              <div class="col-lg-6 blog-bg">
+                <br   />
+                <h4><strong><%=  integrante.nombre %></strong></h4>
+                <br   />
+					  
+              </div>
+              <div class="col-lg-4 callout">
+					        <div class="col-xs-push-12" > 
+                       <td><h2><%=  integrante.instrumento %></h2></td>
+                        <br   />
+                   </div>
+              </div>
+			 </div>
+    </div>
+</div> 
+
+  
+    
+  
+<br>
+<% link_to 'Edit', edit_integrante_path(integrante) %>
+<% link_to 'Destroy', integrante, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+<% end %>
+  
+ <%= link_to 'New Integrante', new_integrante_path %>
