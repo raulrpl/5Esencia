@@ -31,7 +31,11 @@
                 <br>
             <h4><%=  post.nombre %></h4>
 						<h5><%= l post.created_at, :format => :short %></h5>
-                 <p> <%= link_to 'Leer mas', post %> <%= link_to ' Editar Post', edit_post_path(post) %></p>
+                <h4> <%= link_to 'Leer mas', post %><br  /><br  />
+                  <%= link_to 'Editar Post', edit_post_path(post) %></h4> 
+                <br  />                
+                <%= button_to 'Eliminar', post, method: :delete, data: { confirm: 'Estas seguro que deseas eliminarlo?' }, class: "btn btn-success" %>
+                <p></p>
 					  </div>
           </div>
 					<div class="col-xs-push-12" >

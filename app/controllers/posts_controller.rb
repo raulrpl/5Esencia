@@ -31,6 +31,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
 
     respond_to do |format|
+      
       if @post.save
         format.html { redirect_to @post, notice: 'Se creo correctamente el Post.' }
         format.json { render :show, status: :created, location: @post }
@@ -60,7 +61,7 @@ class PostsController < ApplicationController
   def destroy
     @post.destroy
     respond_to do |format|
-      format.html { redirect_to posts_url, notice: 'Post borrado .' }
+      format.html { redirect_to @post, notice: 'Post borrado .' }
       format.json { head :no_content }
     end
   end

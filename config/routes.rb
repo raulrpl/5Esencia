@@ -3,9 +3,12 @@ Rails.application.routes.draw do
   resources :users
 
   get 'principals/index'
+  post 'posts/create' => "posts#create", :as => 'create_post'
+  put 'posts/update' => "posts#update", :as => 'update_post'
+  delete 'posts/destroy' => "posts#destroy", :as => 'destroy_post'
   get 'posts/index'
   get 'posts/new'  => "posts#new", :as => 'new_post'
-  get 'posts/edit'
+  get 'posts/edit' 
   get 'posts/:id' => "posts#show", :as => 'post'
 
   resources :integrantes
