@@ -1,0 +1,52 @@
+<br  />
+<br  />
+<div class="row">
+				<br>
+				<h1 class="centered">Lista de canciones</h1>
+				<hr>
+				
+<br  />
+<br  />
+
+</div><!-- /row -->
+
+
+<% @albums.each do |album| %>
+<div class="centered"><div class="container" id="blog" name="blog">
+
+		<div id="greywrap">
+			  <div class="container">
+              <div class="col-lg-6 blog-bg">
+                <br   />
+                <h4><strong>Interprete</strong></h4>
+                <br   />
+					  
+              </div>
+              <div class="col-lg-4 callout">
+					        <div class="col-xs-push-12" > 
+                       <h2>
+                         
+                          <%= album.cancion %>
+                         </h2>
+                          <%= link_to 'Editar', edit_album_path(album) %> |
+                    <%= link_to 'Eliminar', album, method: :delete, data: { confirm: 'Seguro que deseas eliminar la cancion?' } %>
+                         
+                         
+                        <br   />
+                   </div>
+              </div>    
+         </div>
+      <br  />
+      <br  />
+   </div> 
+</div> 
+         <br  />
+    <% end %>
+     
+ 
+
+
+<form  class="centered" action="http://raulweb2014-117044.usw1-2.nitrousbox.com/integrantes">
+<button type="submit" class="btn btn-success">Regresar a los Integrantes</button>
+</form> 
+<%= link_to 'New Album', new_album_path %>

@@ -3,18 +3,22 @@ Rails.application.routes.draw do
   
 
   
+  resources :albums
+
   get 'servicio/servicio' => "servicio#servicio", :as => 'servicio'
   get 'principals/index'
   post 'posts/create' => "posts#create", :as => 'create_post'
   put 'posts/update' => "posts#update", :as => 'update_post'
   delete 'posts/destroy' => "posts#destroy", :as => 'destroy_post'
   get 'integrantes/index'
+  get 'albums/index'
   get 'users/index'
   get 'posts/index'
   get 'posts/new'  => "posts#new", :as => 'new_post'
   get 'posts/edit' 
   get 'posts/:id' => "posts#show", :as => 'post'
-
+  
+  resources :albums
   resources :integrantes
   resources :users
   resources :posts
