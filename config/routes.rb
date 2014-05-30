@@ -1,18 +1,22 @@
 Rails.application.routes.draw do
   
-  resources :users
+  
 
+  
+  get 'servicio/servicio' => "servicio#servicio", :as => 'servicio'
   get 'principals/index'
   post 'posts/create' => "posts#create", :as => 'create_post'
   put 'posts/update' => "posts#update", :as => 'update_post'
   delete 'posts/destroy' => "posts#destroy", :as => 'destroy_post'
+  get 'integrantes/index'
+  get 'users/index'
   get 'posts/index'
   get 'posts/new'  => "posts#new", :as => 'new_post'
   get 'posts/edit' 
   get 'posts/:id' => "posts#show", :as => 'post'
 
   resources :integrantes
-
+  resources :users
   resources :posts
  # resources :user_sessions
  # match 'login' => 'user_sessions#new', as: :login

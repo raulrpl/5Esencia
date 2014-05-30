@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Pagina Oficial 5ta Esencia</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -20,8 +19,8 @@
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
     
-    <script src="assets/javascripts/js/jquery.min.js"></script>
-	<script type="text/javascript" src="assets/javascripts/js/modernizr.custom.js"></script>
+    <script href="assets/javascripts/js/jquery.min.js"></script>
+	<script type="text/javascript" href="assets/javascripts/js/modernizr.custom.js"></script>
   
 </head>
 <body data-spy="scroll" data-offset="0" data-target="#navbar-main">
@@ -38,9 +37,8 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><%= link_to 'Inicio', root_path %></li>
-            <li><%= link_to 'Aserca', root_path %></li>
-            <li><%= link_to 'Servicio', root_path %></li>
-            <li><%= link_to 'Integrantes', root_path %></li>
+            <li><%= link_to 'Servicio', servicio_path %></li>
+            <li><%= link_to 'Integrantes', integrantes_path %></li>
 			      <li><%= link_to 'Posts', posts_path %></li>
             <li><%= link_to 'Contrataciones', root_path %></li></ul>
         </div><!--/.nav-collapse -->
@@ -65,11 +63,11 @@
       </div>
 </div>
     
-<script type="text/javascript" src="assets/javascripts/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="assets/javascripts/js/retina.js"></script>
-<script type="text/javascript" src="assets/javascripts/js/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="assets/javascripts/js/smoothscroll.js"></script>
-<script type="text/javascript" src="assets/javascripts/js/jquery-func.js"></script>
+<script type="text/javascript" href="/assets/javascripts/js/bootstrap.min.js"></script>
+<script type="text/javascript" href="/assets/javascripts/js/retina.js"></script>
+<script type="text/javascript" href="/assets/javascripts/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" href="/assets/javascripts/js/smoothscroll.js"></script>
+<script type="text/javascript" href="/assets/javascripts/js/jquery-func.js"></script>
   
 </body>
 </html>
