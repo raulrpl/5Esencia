@@ -7,7 +7,7 @@ gem 'rails', '4.1.0'
 group :development do
 gem 'sqlite3', '1.3.6'
 end
-# Use SCSS for stylesheets
+# Use SCSS for styleshee
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -18,6 +18,7 @@ gem 'coffee-rails', '~> 4.0.0'
 group :production do
   gem 'pg'
 end
+gem 'taps'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
