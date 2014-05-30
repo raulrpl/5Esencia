@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  evento: MyString
+  lugar: MyText
+  fecha: 2014-05-30
+
+two:
+  evento: MyString
+  lugar: MyText
+  fecha: 2014-05-30

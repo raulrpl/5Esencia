@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Evento:</strong>
+  <%= @contratacione.evento %>
+</p>
+
+<p>
+  <strong>Lugar:</strong>
+  <%= @contratacione.lugar %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @contratacione.fecha %>
+</p>
+
+<%= link_to 'Edit', edit_contratacione_path(@contratacione) %> |
+<%= link_to 'Back', contrataciones_path %>

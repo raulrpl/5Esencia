@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   
 
   
+  resources :contrataciones
+
   resources :albums
 
   get 'servicio/servicio' => "servicio#servicio", :as => 'servicio'

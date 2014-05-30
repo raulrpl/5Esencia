@@ -1,0 +1,29 @@
+<h1>Listing contrataciones</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Evento</th>
+      <th>Lugar</th>
+      <th>Fecha</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @contrataciones.each do |contratacione| %>
+      <tr>
+        <td><%= contratacione.evento %></td>
+        <td><%= contratacione.lugar %></td>
+        <td><%= contratacione.fecha %></td>
+        <td><%= link_to 'Show', contratacione %></td>
+        <td><%= link_to 'Edit', edit_contratacione_path(contratacione) %></td>
+        <td><%= link_to 'Destroy', contratacione, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Contratacione', new_contratacione_path %>
