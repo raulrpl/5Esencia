@@ -1,19 +1,53 @@
-<p id="notice"><%= notice %></p>
+<br  />
+<br  />
+
+<div class="row">
+				<br>
+				<h1 class="centered">Evento Programado</h1>
+				<hr>
+				<br>
+</div>
+
+<div id="greywrap">
+			<div class="container">
+				
+					<div class="col-lg-4 callout">
+            
+              <div class="col-lg-6 blog-bg">
+
+                  <p><h4>
+                  <strong>Evento:</strong>
+                  <%= @contratacione.evento %>
+                  </h4></p>
+               </div>
+        	</div>
+               <div class="col-lg-8 blog-content">
+               <p>
+         <td><h4> <strong>Direccion:</strong><h4>
+         <%= @contratacione.lugar %>
+        </p>
 
 <p>
-  <strong>Evento:</strong>
-  <%= @contratacione.evento %>
+ <h4> <strong>Se contrato el dia:</strong>
+  <%=  @contratacione.created_at%></h4>
 </p>
+                
+		</div>
 
-<p>
-  <strong>Lugar:</strong>
-  <%= @contratacione.lugar %>
-</p>
+<%= link_to 'Editar Contratacion', edit_contratacione_path(@contratacione) %> 
+ <form  class="centered" action="http://raulweb2014-117044.usw1-2.nitrousbox.com/contrataciones">
+           <button type="submit" class="btn btn-success" >Regresar</button>
+ </form>           
+            <br  />
+            <br  />
+         
 
-<p>
-  <strong>Fecha:</strong>
-  <%= @contratacione.fecha %>
-</p>
-
-<%= link_to 'Edit', edit_contratacione_path(@contratacione) %> |
-<%= link_to 'Back', contrataciones_path %>
+            </div>
+				 
+       </div>
+		</div>
+<div class="row">
+				<br>
+        <p class="centered" id="notice"><%= notice %></p>		
+				<br>
+</div>

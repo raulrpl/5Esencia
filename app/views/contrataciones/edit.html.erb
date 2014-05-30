@@ -1,6 +1,57 @@
-<h1>Editing contratacione</h1>
+<br  />
+<br  />
 
-<%= render 'form' %>
+<div class="row">
+				<br>
+				<h1 class="centered">Editar Evento Programado</h1>
+				<hr>
+				<br>
+</div>
+<%= form_for(@contratacione) do |f| %>
+<div id="greywrap">
+			<div class="container">
+				
+					<div class="col-lg-4 callout">
+            
+              <div class="col-lg-6 blog-bg">
 
-<%= link_to 'Show', @contratacione %> |
-<%= link_to 'Back', contrataciones_path %>
+                  <p><h4>
+                  <strong>Evento:</strong>
+                </h4></p>
+                  <%= f.text_field :evento %>
+                  <p></p>
+               </div>
+        	   </div>
+               <div class="col-lg-8 blog-content">
+               <p>
+         <td><h4> <strong>Direccion:</strong><h4>
+           <h4><%= f.text_area :lugar, :rows => 9, :cols => 77 %></h4>
+         
+        </p>
+
+<p>
+ <h4> <strong>Se contrato el dia:</strong>
+   <%= f.date_field :fecha %>
+  
+</p>
+                
+		</div>
+<table>
+<form  class="centered" action="update_contrataciones">
+                  <button type="submit" class="btn btn-success">Guardar Cambios</button>
+  </form> |
+ <form  class="centered" action="http://raulweb2014-117044.usw1-2.nitrousbox.com/contrataciones">
+           <button type="submit" class="btn btn-success" >Cancelar</button>
+ </form>           
+ </table>
+  <br  />
+  <br  />
+         
+
+            </div>
+	<% end %>			 
+       </div>
+		</div>
+
+
+

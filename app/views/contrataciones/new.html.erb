@@ -1,5 +1,63 @@
-<h1>New contratacione</h1>
+<br>
+<br>
 
-<%= render 'form' %>
+<div class="row">
+				<br>
+				<h1 class="centered">Contratacion</h1>
+				<hr>
+				<br>
+  
+  <%= form_for(@contratacione) do |f| %>
+  
+<div id="greywrap">
+			<div class="container">
+				
+					<div class="col-lg-4 callout">
+            
+              <div class="col-lg-6 blog-bg">
+                <br>
+                <h4>Evento</h4>
+              
+                <%= f.text_field :evento,:placeholder => "  Nombre del evento" %>
+                <br>
+                <p></p>
+                <h4>Nombre</h4>
+                
+                <p></p>
+                
+            </div>
+        	</div>
+          
+          <div class="col-lg-8 blog-content">
+               
+               <h3> <strong>Direccion:</strong><h3>
+                               
+                 <h4><%= f.text_area :lugar, :rows => 9, :cols => 77 ,:placeholder => "Indica la Direccion del evento"%></h4>
+            
+    <p><%= f.label :fecha %><br>
+    <%= f.date_select :fecha %>
+    </p>
+           <p></p>
+        
+    </div>
+  <br>
+<table>
+ <form  class="centered" action="create_contrataciones">
+      <button type="submit" class="btn btn-success">Contratar</button>
+ </form> |
+<form  class="centered" action="http://raulweb2014-117044.usw1-2.nitrousbox.com/contrataciones">
+<button type="submit" class="btn btn-success">Cancelar y Regresar</button>
+</form>
+                 </table>
+            
+            <br  />
 
-<%= link_to 'Back', contrataciones_path %>
+<% end %>
+
+            
+            <br  />
+            <br  />
+            
+            </div>			 
+       </div>
+		</div>

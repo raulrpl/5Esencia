@@ -1,29 +1,122 @@
-<h1>Listing contrataciones</h1>
+<br  />
+<br  />
 
-<table>
-  <thead>
-    <tr>
-      <th>Evento</th>
-      <th>Lugar</th>
-      <th>Fecha</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @contrataciones.each do |contratacione| %>
-      <tr>
-        <td><%= contratacione.evento %></td>
-        <td><%= contratacione.lugar %></td>
-        <td><%= contratacione.fecha %></td>
-        <td><%= link_to 'Show', contratacione %></td>
-        <td><%= link_to 'Edit', edit_contratacione_path(contratacione) %></td>
-        <td><%= link_to 'Destroy', contratacione, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
+<div class="container" id="contact" name="contact">
+			<div class="row">
+			<br>
+				<h1 class="centered">Contrataciones</h1>
+				<hr>
+				<br>
+				<br>
+				<div class="col-lg-4">
+					<h3>Contactanos:</h3>
+					<p><span class="icon icon-home"></span> Col. Centro #987, Chihuahua<br/>
+						<span class="icon icon-phone"></span> +34 9884 4893 <br/>
+						<span class="icon icon-mobile"></span> +34 59855 9853 <br/>
+						<span class="icon icon-envelop"></span> <a href="#"> 5taEsencia@contrataciones.co</a> <br/>
+						<span class="icon icon-twitter"></span> <a href="#"> @blacktie_co </a> <br/>
+						<span class="icon icon-facebook"></span> <a href="#"> BlackTie Agency </a> <br/>
+					</p>
+				</div><!-- col -->
+				
+				<div class="col-lg-4">
+					<h3>Iniciar Sesion</h3>
+					<p></p>
+					<p>
+						<form class="form-horizontal" role="form">
+						  <div class="form-group">
+						    <label for="inputEmail1" class="col-lg-4 control-label"></label>
+						    <div class="col-lg-10">
+						      <input type="email" class="form-control" id="inputEmail1" placeholder="Email">
+						    </div>
+						  </div>
+						  <div class="form-group">
+						    <label for="text1" class="col-lg-4 control-label"></label>
+						    <div class="col-lg-10">
+						      <input type="text" class="form-control" id="text1" placeholder="Your Name">
+						    </div>
+						  </div>
+						  <div class="form-group">
+						    <div class="col-lg-10">
+						      <button type="submit" class="btn btn-success">Sign in</button>
+						    </div>
+						  </div>
+					   </form><!-- form -->
+					</p>
+				</div><!-- col -->
+				
+				<div class="col-lg-4">
+					<h3>Contratar</h3>
+					<p><%= button_to 'Contratar Grupo', new_contratacione_path, class: "btn btn-success" %></p>
+				</div><!-- col -->
+
+			</div><!-- row -->
+		
+		</div><!-- container -->
+
+<br  />
+<br  />
+<br  />
+<br  />
+
+<div id="greywrap">
+<div class="row">
+				
+				<h1 class="centered">Eventos Programados</h1>
+  
+        <br>
+			
+				<br>
+
+</div><!-- /row -->
+</div>
+<br  />
+<br  />
+
+<% @contrataciones.each do |c|%>
+
+<br />
 <br>
+    
+<div class="centered"><div class="container" id="blog" name="blog">
 
-<%= link_to 'New Contratacione', new_contratacione_path %>
+			<div id="greywrap">
+			<div class="container">
+				
+					<div class="col-lg-4 callout">
+            
+              <div class="col-lg-6 blog-bg">
+                <br>
+                <h4><%=  c.evento %></h4>
+						<h5><%= l c.created_at, :format => :short %></h5>
+                <h4> <%= link_to 'Leer mas', c %><br  /><br  />
+                  <%= link_to 'Editar Contratacion', edit_contratacione_path(c) %> </h4> 
+                <br  />                
+                
+                <p></p>
+					  </div>
+          </div>
+					<div class="col-xs-push-12" >
+            
+            <td><h2><%=  c.evento %></h2></td>
+               </div>
+              <div class="col-xs-offset-0 ">
+                
+                <td><h4><%= c.lugar %></h4></td>
+           
+						
+				  </div>
+			 </div>
+    </div>
+        
+      
+  
+  <!-- /col -->
+  </div>
+
+				
+<%end%>				
+
+

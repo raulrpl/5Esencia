@@ -1,11 +1,4 @@
 Rails.application.routes.draw do
-  
-  
-
-  
-  resources :contrataciones
-
-  resources :albums
 
   get 'servicio/servicio' => "servicio#servicio", :as => 'servicio'
   get 'principals/index'
@@ -14,12 +7,17 @@ Rails.application.routes.draw do
   delete 'posts/destroy' => "posts#destroy", :as => 'destroy_post'
   get 'integrantes/index'
   get 'albums/index'
+  get 'contrataciones/index'
+  post 'contrataciones/new' => "contrataciones#new", :as => 'new_contrataciones'
+  post 'contrataciones/create' => "contrataciones#create", :as => 'create_contrataciones'
+  put 'contrataciones/update' => "contrataciones#update", :as => 'update_contrataciones'
   get 'users/index'
   get 'posts/index'
   get 'posts/new'  => "posts#new", :as => 'new_post'
   get 'posts/edit' 
   get 'posts/:id' => "posts#show", :as => 'post'
   
+  resources :contrataciones
   resources :albums
   resources :integrantes
   resources :users
